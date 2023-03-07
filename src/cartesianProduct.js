@@ -1,5 +1,5 @@
 /**
- * curtetio product of two array
+ * cartesian product of two array
  * 
  */
 "use strict"
