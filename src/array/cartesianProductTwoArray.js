@@ -12,6 +12,7 @@ const curtetioProduct = (a, b) => {
     }
     return res
 }
+
 const a = [1, 2]
 const b = [3, 4, 5]
 console.log(curtetioProduct(a, b))

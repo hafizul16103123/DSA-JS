@@ -17,7 +17,7 @@ function movePrint(start, end) {
 }
 function towerOfHanoi(n, start, end) {
 
-    if (n == 1) {
+    if (n == 1) { 
         movePrint(start, end)
     }else{
         let otherRod = 6 - (start + end)

@@ -19,11 +19,9 @@ console.log(sumOfArrayRecursively(array))
 const slowEndTime = Date.now()
 performance("slow",slowStartTime,slowEndTime)
 
-
 // Better Option with O(n2)
 const sumOfArray=(array)=>{
     return _doSum(array,0)
-
 }
 const _doSum=(array,idx)=>{
  if(idx === array.length) return 0

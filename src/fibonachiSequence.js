@@ -22,7 +22,7 @@ performance("slow", ss, es)
 
 
 // ************************** Better version with memorization
-// O(n^2) exponential complexity
+// O(2^n) exponential complexity
 const fibMemo = (n, memo) => {
     if (n in memo) return memo[n]
     if (n <= 2) {
