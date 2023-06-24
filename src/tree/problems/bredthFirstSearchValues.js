@@ -1,6 +1,7 @@
 /**
- * Breadth first traverse
-             a
+ * Breadth first traverse values problem
+ * 
+ *            a
  *        b      c
  *      d   e       f
  * 
@@ -30,27 +31,16 @@ c.right = f
 
 console.log(a)
 
-//Bredth first traverse
-// Iterative approach
-
-const bredthFirstTraverse = (root) => {
-    // add to the statck
-    const queue = [root]
-    // loop while queue not empty
+function bfs(root) {
+    const values = []
+    let queue = [root]
     while (queue.length > 0) {
-        // get top node from queue
         const currentNode = queue.shift()
-        // print value of current node
-        console.log(currentNode.val)
-        // if current node has children then push to queue
+        values.push(currentNode.val)
         if (currentNode.left) queue.push(currentNode.left)
         if (currentNode.right) queue.push(currentNode.right)
     }
+    return values
+
 }
-console.log("Iteratively")
-bredthFirstTraverse(a)
-
-
-
-
-
+console.log(bfs(a))

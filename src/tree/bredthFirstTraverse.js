@@ -31,9 +31,9 @@ console.log(a)
 // Iterative approach
 
 const bredthFirstTraverse=(root)=>{
-    // add to to statck
+    // add to the statck
     const queue=[root]
-    // lop while queue not empty
+    // loop while queue not empty
     while(queue.length>0){
         // get top node from queue
         const currentNode = queue.shift()
