@@ -24,10 +24,10 @@ console.log(nodeA)
 //iteratively
 //traverse LinkedList 
 function traverseLinkedlistIteratively(head) {
-    let currentNode = head
-    while(currentNode!==null){
-        console.log(currentNode.val)
-        currentNode=currentNode.next
+    let current = head
+    while(current!==null){
+        console.log(current.val)
+        current=current.next
 
     }
 }

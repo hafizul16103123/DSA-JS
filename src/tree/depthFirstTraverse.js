@@ -45,19 +45,7 @@ console.log(a)
 // }
 // dfs(a)
 
-
-// Recursive approach 
-
-const dfsRecursive = (root) => {
-    if (root == null) return
-    console.log(root.val)
-    dfsRecursive(root.left)
-    dfsRecursive(root.right)
-}
-console.log("Recursive DFS result")
-dfsRecursive(a)
-
-// pre order dfs  (self,left,right)
+// pre order dfs  (root,left,right)
 const preOrderDfsRecursive = (root) => {
     if (root == null) return
     console.log(root.val)
@@ -66,7 +54,7 @@ const preOrderDfsRecursive = (root) => {
 }
 console.log("Pre order DFS result")
 preOrderDfsRecursive(a)
-// post order dfs  (left,right,self)
+// post order dfs  (left,right,root)
 const postOrderDfsRecursive = (root) => {
     if (root == null) return
     postOrderDfsRecursive(root.left)
@@ -76,12 +64,12 @@ const postOrderDfsRecursive = (root) => {
 console.log("Post order DFS result")
 postOrderDfsRecursive(a)
 
-// in order dfs (left,self,right)
+// in order dfs (left,root,right)
 const InOrderDfsRecursive = (root) => {
     if (root == null) return
     InOrderDfsRecursive(root.left)
-    InOrderDfsRecursive(root.right)
     console.log(root.val)
+    InOrderDfsRecursive(root.right)
 }
 console.log("In order DFS result")
 InOrderDfsRecursive(a)

@@ -7,13 +7,11 @@
  * result=9+15=24
  */
 
-
 class Node {
     constructor(val) {
         this.val = val
         this.left = null
         this.right = null
-
     }
 
 }
@@ -34,23 +32,25 @@ node20.right = node7
 console.log(node3)
 
 // BFS traverse
-function traverseTree(root) {
-    const queue = [root]
-    let sum=0
-    while (queue.length > 0) {
+var sumOfLeftLeaves = function(root) {
+    let sum=0;
+    const queue =[root]
+    while(queue.length>0){
+        const current = queue.shift()
 
-        const currentNode = queue.shift()
-        console.log(currentNode.val)
-        if(currentNode.left){
-            sum+=currentNode.left.val
-            queue.push(currentNode.left)
+
+
+        if(current.left) {
+            if(current.left.left==null && current.left.right == null){
+                sum+=current.left.val
+                console.log({sum})
+            }
+            queue.push(current.left)
         }
-        if(currentNode.right){
-            queue.push(currentNode.right)
-        }
+     
+        if(current.right) queue.push(current.right)
     }
     return sum
-
-}
+};
 
 console.log(traverseTree(node3))
